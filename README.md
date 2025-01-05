@@ -39,7 +39,7 @@ Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on how to co
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=hiero-ai/evm-agent-kit&type=Date)](https://star-history.com/#hiero-ai/evm-agent-kit&Date)
+<!-- [![Star History Chart](https://api.star-history.com/svg?repos=hiero-ai/evm-agent-kit&type=Date)](https://star-history.com/#hiero-ai/evm-agent-kit&Date) -->
 
 ## Security
 
