@@ -38,8 +38,9 @@
     "access": "public"
   },
   "keywords": [
+    "ai",
     "agents",
-    "protocol",
+    "evm",
     "sdk"
   ],
   "files": [

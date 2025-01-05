@@ -1,4 +1,4 @@
-import { parseAbi, parseUnits, Address} from "viem";
+import { parseAbi, parseUnits, Address } from "viem";
 import { EVMKit } from "../index";
 
 const ERC20_ABI = parseAbi([
@@ -12,7 +12,11 @@ const ERC20_ABI = parseAbi([
 ]);
 
 // ERC20 READ
-const erc20BalanceOf = async (agent: EVMKit, tokenAddress: Address, ownerAddress: Address) => {
+const erc20BalanceOf = async (
+  agent: EVMKit,
+  tokenAddress: Address,
+  ownerAddress: Address
+) => {
   if (!ownerAddress) {
     throw new Error("ownerAddress required for balanceOf");
   }
@@ -40,9 +44,14 @@ const erc20BalanceOf = async (agent: EVMKit, tokenAddress: Address, ownerAddress
     symbol,
     decimals,
   };
-}
+};
 
-const erc20Transfer = async (agent: EVMKit, tokenAddress: string, to: string, amount: string) => {
+const erc20Transfer = async (
+  agent: EVMKit,
+  tokenAddress: string,
+  to: string,
+  amount: string
+) => {
   if (!to || !amount) {
     throw new Error("Missing 'to' or 'amount'");
   }
@@ -64,14 +73,14 @@ const erc20Transfer = async (agent: EVMKit, tokenAddress: string, to: string, am
     functionName: "transfer",
     args: [toAddress, parsedAmount],
   });
-}
+};
 
 const erc20Allowance = async (
   agent: EVMKit,
   tokenAddress: Address,
   owner: Address,
   spender: Address
-) {
+) => {
   if (!owner || !spender) {
     throw new Error("Missing 'owner' or 'spender'");
   }
@@ -102,9 +111,14 @@ const erc20Allowance = async (
     symbol,
     decimals,
   };
-}
+};
 
-const erc20Approve = async (agent: EVMKit, tokenAddress: Address, spender: Address, amount: string) => {
+const erc20Approve = async (
+  agent: EVMKit,
+  tokenAddress: Address,
+  spender: Address,
+  amount: string
+) => {
   if (!spender || !amount) {
     throw new Error("Missing 'spender' or 'amount'");
   }
@@ -123,7 +137,7 @@ const erc20Approve = async (agent: EVMKit, tokenAddress: Address, spender: Addre
     functionName: "approve",
     args: [spender, parsedAmount],
   });
-}
+};
 
 const erc20TransferFrom = async (
   agent: EVMKit,
@@ -150,7 +164,7 @@ const erc20TransferFrom = async (
     functionName: "transferFrom",
     args: [from, to, parsedAmount],
   });
-}
+};
 
 export const erc20Tools = {
   erc20BalanceOf,

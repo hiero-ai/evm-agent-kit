@@ -1,6 +1,6 @@
 # EVM Agent Kit
 
-An open-source toolkit for connecting AI agents to EVM protocols.
+An open-source toolkit for connecting AI agents to EVM protocols. Initial version inspired by [Solana Agent Kit](https://github.com/hiero-ai/solana-agent-kit).
 
 - Trade tokens
 - Launch new tokens
@@ -9,6 +9,28 @@ An open-source toolkit for connecting AI agents to EVM protocols.
 ## Core Features
 
 [TBO]
+
+## 📦 Installation
+
+```bash
+yarn add @hiero-ai/evm-agent-kit
+```
+
+## Quick Start
+
+```typescript
+import { EVMKit, createEVMTools } from "evm-agent-kit";
+import { base } from "viem/chains"; // or any other chain
+
+// Initialize with private key and optional RPC URL
+const chain = base;
+const privateKey = "evm-wallet-private-key";
+
+const agent = new EVMKit(privateKey, chain);
+
+// Create LangChain tools
+const tools = createEVMTools(agent);
+```
 
 ## AI integrations
 
