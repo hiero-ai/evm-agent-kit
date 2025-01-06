@@ -1,6 +1,6 @@
 # EVM Agent Kit
 
-An open-source toolkit for connecting AI agents to EVM protocols. Initial version inspired by [Solana Agent Kit](https://github.com/hiero-ai/solana-agent-kit).
+An open-source toolkit for connecting AI agents to EVM protocols. Initial version inspired by [Solana Agent Kit](https://github.com/sendaifun/solana-agent-kit).
 
 ![NPM Downloads](https://img.shields.io/npm/dm/@hiero-ai/evm-agent-kit?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/hiero-ai/evm-agent-kit?style=for-the-badge)
